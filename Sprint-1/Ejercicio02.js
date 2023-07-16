@@ -1,6 +1,4 @@
 //Crear numero telefonico
-
-
 function crearTelefono(nums) {
     const parte1 = nums.slice(0, 3).join(""); 
     const parte2 = nums.slice(3, 6).join("");
@@ -8,9 +6,8 @@ function crearTelefono(nums) {
     return `(${parte1}) ${parte2}-${parte3}`;
 }
 
-// Ejemplo de uso:
 
-const nums = [1, 2, 3, 4, 5, 8, 7, 3, 8, 9]; // Por favor inserta 10 numeros
+const nums = [1, 2, 1, 4, 5, 8, 7, 3, 8, 9]; // Por favor inserta 10 numeros
 
 //Verificamos si los numeros son enteros
 for (let i = 0; i < nums.length; i++) {
@@ -25,7 +22,5 @@ if (nums.length !== 10) {
     return;
 }
 
-const numeroTelefono = crearTelefono(nums); 
-// Devuelve "(123) 456-7890"
+const numeroTelefono = crearTelefono(nums) 
 console.log(numeroTelefono);
-console.log(numeroTelefono)
