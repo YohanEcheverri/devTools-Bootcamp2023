@@ -8,9 +8,24 @@ function crearTelefono(nums) {
     return `(${parte1}) ${parte2}-${parte3}`;
 }
 
-  // Ejemplo de uso:
+// Ejemplo de uso:
 
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]; // Por favor inserta 10 numeros
+const nums = [1, 2, 3, 4, 5, 8, 7, 3, 8, 9]; // Por favor inserta 10 numeros
+
+//Verificamos si los numeros son enteros
+for (let i = 0; i < nums.length; i++) {
+    if (!Number.isInteger(nums[i]) || nums[i] < 0 || nums[i] > 9){
+        console.error("Todos los numeros deben ser enteros positivos y menores e iguales que 9")
+        return;
+    }
+}
+// Verificar que haya exactamente 10 números
+if (nums.length !== 10) {
+    console.error("Deben ser exactamente 10 numeros");
+    return;
+}
+
 const numeroTelefono = crearTelefono(nums); 
 // Devuelve "(123) 456-7890"
 console.log(numeroTelefono);
+console.log(numeroTelefono)
