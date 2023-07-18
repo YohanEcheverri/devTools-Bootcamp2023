@@ -1,7 +1,12 @@
 
 function countNameRepetitions(nombres) {
     const contadorNombre = {};
-    
+    for (const nombre of nombres) {
+        if (typeof nombre !== 'string') {
+        console.log('Todos los elementos deben ser de tipo string.');
+        return;
+        }
+    }
 // contar repeticiones
 for (const nombre of nombres) {
     if (nombre in contadorNombre) {
